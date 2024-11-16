@@ -65,7 +65,7 @@ body {
     background-color: #c82333;
   }
   
-  //* Geral */
+
 body {
     margin: 0;
     padding: 0;
@@ -209,3 +209,15 @@ body {
       opacity: 0.7;
     }
   }
+
+  .no-button {
+  
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
