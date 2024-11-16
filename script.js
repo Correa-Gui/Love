@@ -5,26 +5,32 @@ onload = () => {
   }, 1000);
 };
 
-const noButtons = document.querySelectorAll('.no-button');
-const container = document.querySelector('.container');
 
-// Faz os botões "Não" fugirem
-noButtons.forEach((noButton) => {
-  noButton.addEventListener('mouseover', () => {
-    const containerRect = container.getBoundingClientRect();
-    const buttonWidth = noButton.offsetWidth;
-    const buttonHeight = noButton.offsetHeight;
 
-    // Gera uma nova posição aleatória dentro dos limites do contêiner
-    const randomX = Math.random() * (containerRect.width - buttonWidth);
-    const randomY = Math.random() * (containerRect.height - buttonHeight);
+document.querySelectorAll('.no-button').forEach(button => {
+  button.addEventListener('mouseover', () => {
+    // Obtém os valores dos atributos data-x e data-y
+    const x = button.getAttribute('data-x');
+    const y = button.getAttribute('data-y');
 
-    // Aplica a nova posição ao botão
-    noButton.style.position = 'absolute';
-    noButton.style.left = `${randomX}px`;
-    noButton.style.top = `${randomY}px`;
+    // Define a posição do botão
+    button.style.position = 'absolute';
+    button.style.left = `${x}px`;
+    button.style.top = `${y}px`;
+
+    // (Opcional) Atualiza os valores de data-x e data-y para uma nova posição aleatória
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    const newX = Math.random() * (viewportWidth - button.offsetWidth);
+    const newY = Math.random() * (viewportHeight - button.offsetHeight);
+
+    button.setAttribute('data-x', newX);
+    button.setAttribute('data-y', newY);
   });
 });
+
+
 
 
 const yesButton = document.querySelector('.yes-button');
