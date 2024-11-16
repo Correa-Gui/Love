@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surpresa</title>
+  <link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+  <div class="container">
+    <div class="image-container">
+      <img src="https://i.pinimg.com/originals/9c/dc/29/9cdc293452c1c00b3a1dae612ab96e65.jpg" alt="Análise" class="main-image">
+    </div>
+    <h1 class="title">Você me ama quanto?</h1>
+    <div class="buttons">
+      <button class="no-button">Muito</button>
+      <button class="no-button">Daqui até o pontilhão</button>
+      <button class="yes-button">Daqui até a festa da Duda</button>
+    </div>
+  </div>
+
+  <div class="input-container" style="display: none;">
+    <div class="message">
+      <h1 class="input-message">Rum... Bom mesmo! </h1>
+      <img src="https://i.pinimg.com/236x/54/04/6a/54046a95648867f81f3c6b80cede01ab.jpg" alt="Mensagem" class="input-image">
+      <h1> Porém ainda preciso confirmar uma informação...</h1>
+      <h1 class="rainbow-text">COMO VOCÊ SE CHAMA?</h1>
+
+    </div>
+    <input type="text" id="magic-word" placeholder="Escreva aqui..." />
+    <p id="error-message" class="error-message" style="display: none;">Tente novamente!</p>
+    <p id="error-message2" class="error-message" style="display: none;">Quase lá!</p>
+    <p id="success-message" class="success-message" style="display: none;">Ok, agora eu acredito! ❤️</p>
+    <button id="continue-button" style="display: none;">Continuar</button>
+  </div>
+
+  <div class="final-result" style="display: none;">
+    <img src="https://i.pinimg.com/originals/5a/3c/33/5a3c333c9bbf883d47e16c5b8c81a8a6.jpg" alt="Amor">
+    <p>Você acertou! ❤️</p>
+    <button id="continue-button">Continuar</button>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
