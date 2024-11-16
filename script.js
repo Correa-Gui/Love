@@ -5,6 +5,28 @@ onload = () => {
   }, 1000);
 };
 
+const noButtons = document.querySelectorAll('.no-button');
+const container = document.querySelector('.container');
+
+// Faz os botões "Não" fugirem
+noButtons.forEach((noButton) => {
+  noButton.addEventListener('mouseover', () => {
+    const containerRect = container.getBoundingClientRect();
+    const buttonWidth = noButton.offsetWidth;
+    const buttonHeight = noButton.offsetHeight;
+
+    // Gera uma nova posição aleatória dentro dos limites do contêiner
+    const randomX = Math.random() * (containerRect.width - buttonWidth);
+    const randomY = Math.random() * (containerRect.height - buttonHeight);
+
+    // Aplica a nova posição ao botão
+    noButton.style.position = 'absolute';
+    noButton.style.left = `${randomX}px`;
+    noButton.style.top = `${randomY}px`;
+  });
+});
+
+
 const yesButton = document.querySelector('.yes-button');
 const container = document.querySelector('.container');
 const inputContainer = document.querySelector('.input-container');
