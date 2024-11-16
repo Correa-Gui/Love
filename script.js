@@ -82,6 +82,6 @@ function validateMagicWord() {
 // Ação ao clicar no botão "Continuar"
 // Ação ao clicar no botão "Continuar"
 continueButton.addEventListener('click', () => {
-  window.location.href = './intro.html'; // Substitua pelo link desejado
+  window.location.href = './home.html'; // Substitua pelo link desejado
 });
 
