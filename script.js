@@ -6,7 +6,6 @@ onload = () => {
 };
 
 
-
 document.querySelectorAll('.no-button').forEach(button => {
   button.addEventListener('mouseover', () => {
     // Obtém os valores dos atributos data-x e data-y
@@ -29,7 +28,6 @@ document.querySelectorAll('.no-button').forEach(button => {
     button.setAttribute('data-y', newY);
   });
 });
-
 
 
 
